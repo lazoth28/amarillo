@@ -1,1 +1,70 @@
-<h1>hola mundo</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amarillo — La película de nuestras vidas</title>
+<meta name="description" content="Amarillo, un poema.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Grano de película sobre todo -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Barras de cine (letterbox) -->
+<div class="letterbox top" aria-hidden="true"></div>
+<div class="letterbox bottom" aria-hidden="true"></div>
+
+<!-- Fondo de fotografías dinámicas -->
+<div id="fondo-fotos" class="fondo-fotos" aria-hidden="true">
+  <!-- Las capas de imagen se inyectan por JS -->
+</div>
+
+<!-- Capa oscura para legibilidad -->
+<div class="capa-oscura" aria-hidden="true"></div>
+
+<!-- Partículas / luces difuminadas -->
+<canvas id="particulas" aria-hidden="true"></canvas>
+
+<!-- Pantalla de apertura tipo carátula de película -->
+<section id="portada" class="portada">
+  <p class="eyebrow reveal">un recuerdo, contado con imágenes</p>
+  <h1 class="titulo-principal reveal">Amarillo</h1>
+  <p class="subtitulo reveal">la película de nuestras vidas</p>
+  <button id="btn-entrar" class="btn-entrar reveal" aria-label="Comenzar a leer el poema">
+    <span>reproducir</span>
+  </button>
+</section>
+
+<!-- Contenido del poema -->
+<main id="escenario" class="escenario oculto">
+  <div class="contenedor-poema">
+    <span class="titulo-obra">Amarillo</span>
+    <div id="poema" class="poema"></div>
+  </div>
+  <p class="indicador-scroll" aria-hidden="true">desliza para seguir leyendo</p>
+</main>
+
+<footer class="firma">
+  <p>hagamos juntos… la película de nuestras vidas</p>
+</footer>
+
+<!--
+  Música opcional.
+  Coloca tu canción en formato MP3 dentro de la carpeta "audio/"
+  y descomenta el siguiente bloque para que suene al entrar a la página.
+
+  <audio autoplay loop>
+      <source src="audio/cancion.mp3" type="audio/mpeg">
+  </audio>
+-->
+
+<script src="js/script.js"></script>
+</body>
+</html>
