@@ -39,9 +39,9 @@
 
   /* ------------------------------------------------------------------ *
    * 2. SLIDESHOW DE FOTOGRAFÍAS
-   *    Coloca tus imágenes en img/foto1.jpg ... foto5.jpg (o las que
-   *    quieras). El script prueba automáticamente hasta 20 fotos y
-   *    usa solo las que existan.
+   *    Coloca tus imágenes foto1.jpg ... foto5.jpg (o las que quieras)
+   *    en la MISMA carpeta que index.html. El script prueba
+   *    automáticamente hasta 20 fotos y usa solo las que existan.
    * ------------------------------------------------------------------ */
   const CANTIDAD_MAXIMA_A_PROBAR = 20;
   const EXTENSIONES = ['jpg', 'jpeg', 'png', 'webp'];
@@ -61,7 +61,7 @@
   async function detectarFotos() {
     const candidatas = [];
     for (let i = 1; i <= CANTIDAD_MAXIMA_A_PROBAR; i++) {
-      EXTENSIONES.forEach(ext => candidatas.push(`img/foto${i}.${ext}`));
+      EXTENSIONES.forEach(ext => candidatas.push(`foto${i}.${ext}`));
     }
     const resultados = await Promise.all(candidatas.map(probarImagen));
     return resultados.filter(Boolean);
